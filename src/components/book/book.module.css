@@ -1,0 +1,38 @@
+.book {
+  margin-top: 30px;
+  padding: 15px;
+
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 20px;
+  
+  border-radius: 5px;
+  border: 1px solid #000000;
+  min-width: 500px;
+  width: 100%;
+}
+
+.book__info {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.book__buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.book__content {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+}
+
+.book__cover {
+  height: 205px;
+  width: 145px;
+}

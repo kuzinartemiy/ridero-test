@@ -1,0 +1,9 @@
+.editBookForm {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.editBookForm__submitBtn {
+  cursor: pointer;
+}

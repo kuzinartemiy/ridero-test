@@ -1,0 +1,38 @@
+.modal {
+  z-index: 5;
+  box-sizing: border-box;
+  padding: 20px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #FEFEFE;
+}
+
+.modal__wrapper {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: rgba(0,0,0,.5);
+}
+
+.modal__closeBtn {
+  width: 24px;
+  height: 24px;
+  align-self: flex-end;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+
+  transition: .3s;
+}
+
+.modal__closeBtn:hover {
+  opacity: .8;
+}
