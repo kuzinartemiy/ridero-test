@@ -10,7 +10,7 @@ import { TBook } from '../../utils/types';
 
 const BooksList: FC<IBooksList> = () => {
   const dispatch = useAppDispatch();
-  const books = useAppSelector((store: any) => store.books.books);
+  const books = useAppSelector((store) => store.books.books);
   const [addBookModal, setAddBookModal] = useState<boolean>(false);
   const localBooks = JSON.parse(localStorage.getItem('books') || '[]') || [];
 

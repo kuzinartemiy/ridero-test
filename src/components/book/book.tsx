@@ -6,7 +6,7 @@ import EditBooksForm from '../edit-books-form/edit-books-form';
 import { deleteBook } from '../../service/slices/books';
 import { IBook } from './book.props';
 
-const Book: FC<IBook> = ({ bookData }) => {
+const Book: FC<IBook> = ({ bookData, className, ...props }) => {
   const {
     author, title, img, id,
   } = bookData;
@@ -25,7 +25,7 @@ const Book: FC<IBook> = ({ bookData }) => {
 
   return (
     <>
-      <div className={styles.book}>
+      <div className={`${styles.book} ${className}`} {...props}>
         <img
           className={styles.book__cover}
           src={img || 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/No-Image-Placeholder.svg/1665px-No-Image-Placeholder.svg.png'}

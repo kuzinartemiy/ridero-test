@@ -9,7 +9,9 @@ import { useAppDispatch } from '../../service/hooks';
 import { IEditBooksForm } from './edit-books-form.props';
 import { TBook } from '../../utils/types';
 
-const EditBooksForm: FC<IEditBooksForm> = ({ onClose, id }) => {
+const EditBooksForm: FC<IEditBooksForm> = ({
+  onClose, id, className, ...props
+}) => {
   const localBooks = JSON.parse(localStorage.getItem('books') || '[]') || [];
 
   const dispatch = useAppDispatch();
@@ -69,7 +71,7 @@ const EditBooksForm: FC<IEditBooksForm> = ({ onClose, id }) => {
   };
 
   return (
-    <form className={styles.editBookForm} onSubmit={handleSubmit}>
+    <form className={`${styles.editBookForm} ${className}`} onSubmit={handleSubmit} {...props}>
       <input onChange={handleChangeAuthor} required value={author} type="text" placeholder="Автор" minLength={3} maxLength={50} />
       <input onChange={handleChangeTitle} required value={title} type="text" placeholder="Название" minLength={3} maxLength={50} />
       <span>Обложка</span>
